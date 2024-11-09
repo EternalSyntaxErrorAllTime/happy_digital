@@ -1,0 +1,108 @@
+.IndexPage {
+    z-index: 10;
+    width: 100vw;
+    height: 100vh;
+
+    .MainHeader {
+        z-index: 2;
+        position: absolute;
+        top: 45%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        text-align: center;
+        font-family: "EricaOne-Regular", sans-serif;
+        font-weight: 400;
+
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        .title {
+            text-shadow: 10px 10px 5px rgba(0, 0, 0, 0.6);
+            font-size: 250px;
+            color: var(--main-color);
+        }
+
+        .typeCompany {
+            text-shadow: 5px 4px 4px rgba(0, 0, 0, 0.5);
+            font-size: 35px;
+            color: var(--color-text);
+        }
+    }
+
+    .Schedule {
+        z-index: 2;
+        position: absolute;
+        top: 70px;
+        left: 30px;
+
+        .icon-buble {
+            -webkit-filter: drop-shadow(2px 5px 5px rgba(0, 0, 0, 0.5));
+            filter: drop-shadow(2px 5px 5px rgba(0, 0, 0, 0.5));
+
+            path {
+                fill: var(--main-color);
+            }
+        }
+
+        .text {
+            @extend %text-for-buble;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    }
+
+    .Order {
+        cursor: pointer;
+
+        z-index: 2;
+        position: absolute;
+        top: 600px;
+        left: 200px;
+
+        .icon-buble {
+            -webkit-filter: drop-shadow(2px 5px 5px rgba(0, 0, 0, 0.5));
+            filter: drop-shadow(2px 5px 5px rgba(0, 0, 0, 0.5));
+
+            path {
+                fill: var(--main-color);
+            }
+        }
+
+        .text {
+            @extend %text-for-buble;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+
+        // &:hover {
+        //     svg path {
+        //         fill: yellow;
+        //     }
+        //     .text {
+        //         color: yellow;
+        //     }
+        // }
+    }
+
+    %text-for-buble {
+        width: 100%;
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        color: var(--color-text);
+        text-shadow: 3px 4px 5px rgba(0, 0, 0, 0.5);
+
+        text-align: center;
+        font-family: "DaysOne", sans-serif;
+        font-weight: 400;
+        font-size: 25px;
+    }
+}

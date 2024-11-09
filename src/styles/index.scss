@@ -1,0 +1,29 @@
+@import url("./reset.css");
+@import url("./importFount.scss"); 
+@import url("./valueColor.scss");
+
+
+body, main, .App {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+// %icon-buble {
+//     * {
+//         fill: var(--main-clor);
+//     }
+
+//     .text {
+//         position: absolute;
+//         top: 50%;
+//         left: 50%;
+//         text-align: center;
+//         color: var(--color-text);
+//         font-family: "DaysOne", sans-serif;
+//         transform: translate(-50%, -50%);
+//     }
+// }        
+
+
+

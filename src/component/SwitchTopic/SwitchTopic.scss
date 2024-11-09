@@ -1,0 +1,22 @@
+.SwitchTopic {
+
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 1;
+
+    width: 100px;
+    height: 35px;
+    border-radius: 100px;
+    border: 5px solid var(--main-color);
+    background-color: white;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+    
+}
