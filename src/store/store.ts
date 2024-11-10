@@ -1,11 +1,9 @@
 import { configureStore } from "@reduxjs/toolkit";
 
-import counterReducer from './features/counterSlice'
 import SwitchTopicReducer  from "./features/SwitchTopic";
 
 const store = configureStore({
   reducer: {
-    counter: counterReducer,
     switchTopic: SwitchTopicReducer,
   },
 })

@@ -3,17 +3,37 @@ import { RootState } from "./store/store";
 
 import "./App.scss";
 
-import { Routes, Route } from "react-router-dom";
-import { Link, NavLink } from "react-router-dom";
+import { Routes, Route, NavLink, Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import { ReactSVG } from "react-svg";
+
+import { useSelector } from "react-redux";
 
 import { IndexPage } from "./page/IndexPage";
 import { AboutAgencyPage } from "./page/AboutAgencyPage";
 
-
 import { SwitchTopic } from "./component/SwitchTopic";
 
-import { useSelector } from "react-redux";
+
+const containerUl = {
+  hidden: { opacity: 1, scale: 0 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      delayChildren: 1.5,
+      staggerChildren: 0.2
+    }
+  }
+};
+
+const itemLi = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1
+  }
+};
 
 
 const App: FC = () => {
@@ -22,33 +42,50 @@ const App: FC = () => {
   return (
     <div className={topic === "dark" ? "BlackStyle" : "WhiteStyle"}>
       <div className="App">
+
         <SwitchTopic />
-        <div className="SocialNetwork">
+
+        <motion.div className="SocialNetwork"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, ease: "easeInOut", delay: 2 }}
+        >
           <Link to=""><ReactSVG src="./icons/YouTube.svg" /></Link>
           <Link to=""><ReactSVG src="./icons/VK.svg" /></Link>
           <Link to=""><ReactSVG src="./icons/Telegram.svg" /></Link>
-        </div>
+        </motion.div>
 
         <Routes>
           <Route path="/" element={<IndexPage />} />
-          <Route path="/about_agency" element={<AboutAgencyPage/>} />
+          <Route path="/about_agency" element={<AboutAgencyPage />} />
         </Routes>
 
-        <nav className="WebsiteNavigation">
-          <ul className="text">
-            <li>
-              <NavLink to="/" className={({ isActive }) => isActive ? "active" : ""}>Основное</NavLink>
-            </li>
-            <li><NavLink to="/about_agency">Об агентстве</NavLink></li>
-            <li><NavLink to="/zxc">Наши услуги</NavLink></li>
-            <li><NavLink to="/z">Отзывы</NavLink></li>
-          </ul>
+        <motion.nav className="WebsiteNavigation"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1, ease: "easeInOut" }}
+        >
+          <motion.ul
+            className="text"
+            variants={containerUl}
+            initial="hidden"
+            animate="visible"
+          >
+            <motion.li variants={itemLi}><NavLink to="/">Основное</NavLink></motion.li>
+            <motion.li variants={itemLi}><NavLink to="/about_agency">Об агентстве</NavLink></motion.li>
+            <motion.li variants={itemLi}><NavLink to="/zxc">Наши услуги</NavLink></motion.li>
+            <motion.li variants={itemLi}><NavLink to="/z">Отзывы</NavLink></motion.li>
+          </motion.ul>
           <ReactSVG src="./icons/buble-3.svg" />
-        </nav>
+        </motion.nav>
 
-        <button className="NextButton">
+        <motion.button
+          initial={{ scale: 0 }}
+          animate={{ scale: 1 }}
+          transition={{ duration: 1.5, ease: "easeInOut" }}
+          className="NextButton">
           <p>Next</p>
-        </button>
+        </motion.button>
 
       </div>
     </div>
