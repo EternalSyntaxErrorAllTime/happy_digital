@@ -5,7 +5,7 @@ import "./IndexPage.scss";
 import { ReactSVG } from "react-svg";
 import { motion } from "framer-motion";
 
-import { IndexBacground } from "../../component/IndexBacground";
+import { IndexBacground } from "../../component/IndexBackground";
 
 
 const IndexPage: FC = () => {

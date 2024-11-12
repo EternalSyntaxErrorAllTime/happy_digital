@@ -1,6 +1,6 @@
 import type { FC } from "react";
 
-import "./IndexBacground.scss";
+import "./IndexBackground.scss";
 
 import { motion } from "framer-motion";
 

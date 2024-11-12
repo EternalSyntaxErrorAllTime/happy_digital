@@ -1,0 +1,153 @@
+.AboutAgencyBackground {
+    width: 100%;
+    height: 100%;
+
+    z-index: 0;
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    overflow: hidden;
+
+    background-color: var(--bg);
+    position: relative;
+
+    .TopLine {
+        display: grid;
+        grid-template-columns: 200px 400px 620px auto 230px;
+        grid-template-rows: 100%;
+        grid-template-areas:
+            ". spacer . spacer .";
+
+        .Rectangle-1 {
+            height: 300px;
+            background-color: var(--element-1);
+            box-shadow: 2px 10px 10px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .ComboElement {
+            position: relative;
+
+            .RoundedRectangle-1 {
+                position: absolute;
+
+                border-radius: 0 0 100px 100px;
+                width: 265px;
+                height: 161px;
+                box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.5);
+                background-color: var(--element-1);
+                z-index: 1;
+            }
+
+            .RoundedRectangle-2 {
+                position: absolute;
+                left: 160px;
+                border-radius: 0 0 100px 100px;
+                width: 265px;
+                height: 251px;
+                box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.5);
+                background-color: var(--element-2);
+            }
+
+            .RoundedRectangle-3 {
+                position: absolute;
+                left: 350px;
+                border-radius: 0 0 100px 100px;
+                width: 265px;
+                height: 217px;
+                box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.5);
+                background-color: var(--element-1);
+
+                display: flex;
+                justify-content: center;
+
+                .RoundedRectangle-4 {
+                    border-radius: 0 0 70px 70px;
+                    width: 200px;
+                    height: 173px;
+                    box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.5);
+                    background-color: var(--element-3);
+                }
+            }
+
+        }
+
+        .Rectangle-2 {
+            border-radius: 0 0 0 10px;
+            height: 430px;
+            box-shadow: 2px 10px 10px 5px rgba(0, 0, 0, 0.5);
+            background-color: var(--element-3);
+        }
+    }
+
+
+
+    .BottomLine {
+        display: grid;
+        grid-template-columns: 500px 100px auto;
+        grid-template-rows: 100%;
+        grid-template-areas:
+            ". spacer .";
+
+        position: relative;
+
+        .Сircle-1 {
+            position: relative;
+            left: -130px;
+            bottom: -130px;
+
+            display: grid;
+            place-items: center;
+
+            width: 424px;
+            height: 424px;
+
+            border-radius: 100%;
+            box-shadow: 0 4px 10px 5px rgba(0, 0, 0, 0.5);
+            background-color: var(--element-1);
+
+            .Сircle-2 {
+                width: 380px;
+                height: 380px;
+
+                border-radius: 100%;
+                box-shadow: inset 0 0 5px 1px rgba(0, 0, 0, 0.5);
+                background-color: var(--element-3);
+            }
+        }
+
+
+        .ItemRight {
+            position: relative;
+
+            .Сircle-3 {
+                position: absolute;
+                bottom: -580px;
+
+                width: 750px;
+                height: 750px;
+
+                border-radius: 100%;
+                box-shadow: 0 -2px 20px 2px rgba(0, 0, 0, 0.5);
+                background-color: var(--element-3);
+                z-index: 1;
+            }
+
+            .RoundedRectangle-5 {
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                border-radius: 75% 0 0 0;
+                width: 700px;
+                height: 180px;
+                box-shadow: -10px -2px 20px 0 rgba(0, 0, 0, 0.5);
+                background: #ffc8dd;
+            }
+        }
+
+
+    }
+
+
+}

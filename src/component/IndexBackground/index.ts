@@ -1,0 +1,1 @@
+export { default as IndexBacground } from "./IndexBackground";

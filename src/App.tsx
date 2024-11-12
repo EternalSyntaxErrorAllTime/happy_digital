@@ -10,7 +10,7 @@ import { ReactSVG } from "react-svg";
 import { useSelector } from "react-redux";
 
 import { IndexPage } from "./page/IndexPage";
-import { AboutAgencyPage } from "./page/AboutAgencyPage";
+import { PageAboutAgency } from "./page/PageAboutAgency";
 
 import { SwitchTopic } from "./component/SwitchTopic";
 
@@ -57,7 +57,7 @@ const App: FC = () => {
 
         <Routes>
           <Route path="/" element={<IndexPage />} />
-          <Route path="/about_agency" element={<AboutAgencyPage />} />
+          <Route path="/about_agency" element={<PageAboutAgency />} />
         </Routes>
 
         <motion.nav className="WebsiteNavigation"
