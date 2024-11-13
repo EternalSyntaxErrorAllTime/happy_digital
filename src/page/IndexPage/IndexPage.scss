@@ -97,4 +97,32 @@
         font-weight: 400;
         font-size: 25px;
     }
+
+    .container-for-next {
+        z-index: 2;
+        position: absolute;
+        left: 35%;
+        bottom: 100px;
+        transform: translate(-50%, -50%);
+    }
+
+    .NextButton {
+        display: grid;
+        align-content: center;
+
+        border: none;
+        border-radius: 100px;
+        width: 500px;
+        height: 100px;
+        box-shadow: 0 10px 10px 10px rgba(0, 0, 0, 0.5);
+        background: #fff;
+
+        font-family: "EricaOne-Regular";
+        text-align: center;
+        font-weight: 400;
+        font-size: 80px;
+        color: var(--main-color);
+
+        cursor: pointer;
+    }
 }

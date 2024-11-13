@@ -79,14 +79,6 @@ const App: FC = () => {
           <ReactSVG src="./icons/buble-3.svg" />
         </motion.nav>
 
-        <motion.button
-          initial={{ scale: 0 }}
-          animate={{ scale: 1 }}
-          transition={{ duration: 1.5, ease: "easeInOut" }}
-          className="NextButton">
-          <p>Next</p>
-        </motion.button>
-
       </div>
     </div>
 

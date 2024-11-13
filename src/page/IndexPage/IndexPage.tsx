@@ -4,9 +4,11 @@ import "./IndexPage.scss";
 
 import { ReactSVG } from "react-svg";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 import { IndexBacground } from "../../component/IndexBackground";
 
+const RRD_link = motion(Link);
 
 const IndexPage: FC = () => {
   return (
@@ -50,6 +52,21 @@ const IndexPage: FC = () => {
           <p>Оформить</p>
           <p>заказ</p>
         </div>
+      </motion.div>
+
+      <motion.div
+        initial={{ scale: 0 }}
+        animate={{ scale: 1 }}
+        transition={{ duration: 1.5, ease: "easeInOut" }}
+        className="container-for-next">
+        <RRD_link
+          to="/about_agency"
+          whileHover={{ scale: 1.2 }}
+          whileTap={{ scale: 0.8 }}
+          transition={{ type: "spring", duration: 1, bounce: 0.7 }}
+          className="NextButton">
+          <p>Next</p>
+        </RRD_link>
       </motion.div>
 
       <IndexBacground />
