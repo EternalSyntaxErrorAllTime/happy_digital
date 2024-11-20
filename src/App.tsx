@@ -9,10 +9,11 @@ import { ReactSVG } from "react-svg";
 
 import { useSelector } from "react-redux";
 
+import { SwitchTopic } from "./component/SwitchTopic";
+
 import { IndexPage } from "./page/IndexPage";
 import { PageAboutAgency } from "./page/PageAboutAgency";
-
-import { SwitchTopic } from "./component/SwitchTopic";
+import { OurServicesPage } from "./page/OurServicesPage";
 
 
 const containerUl = {
@@ -58,6 +59,7 @@ const App: FC = () => {
         <Routes>
           <Route path="/" element={<IndexPage />} />
           <Route path="/about_agency" element={<PageAboutAgency />} />
+          <Route path="/our_services" element={<OurServicesPage />} />
         </Routes>
 
         <motion.nav className="WebsiteNavigation"
@@ -73,7 +75,7 @@ const App: FC = () => {
           >
             <motion.li variants={itemLi}><NavLink to="/">Основное</NavLink></motion.li>
             <motion.li variants={itemLi}><NavLink to="/about_agency">Об агентстве</NavLink></motion.li>
-            <motion.li variants={itemLi}><NavLink to="/zxc">Наши услуги</NavLink></motion.li>
+            <motion.li variants={itemLi}><NavLink to="/our_services">Наши услуги</NavLink></motion.li>
             <motion.li variants={itemLi}><NavLink to="/z">Отзывы</NavLink></motion.li>
           </motion.ul>
           <ReactSVG src="./icons/buble-3.svg" />

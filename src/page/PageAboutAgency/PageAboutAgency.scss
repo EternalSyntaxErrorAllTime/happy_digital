@@ -2,8 +2,6 @@
     z-index: 10;
     width: 100vw;
     height: 100vh;
-    background-color: rgb(73, 95, 221);
-
 
     .InfoCompany {
         z-index: 1;
@@ -62,9 +60,9 @@
             padding: 50px 100px;
             text-shadow: 3px 4px 5px rgba(0, 0, 0, 0.5);
             font-family: "DaysOne";
+            color: var(--color-text);
             font-weight: 400;
             font-size: 25px;
-            color: var(--color-text);
             
             ol {
                 list-style: decimal;

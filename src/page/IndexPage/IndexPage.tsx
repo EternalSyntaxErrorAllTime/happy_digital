@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 
 import { IndexBacground } from "../../component/IndexBackground";
 
-const RRD_link = motion(Link);
+const RRD_link = motion.create(Link);
 
 const IndexPage: FC = () => {
   return (
