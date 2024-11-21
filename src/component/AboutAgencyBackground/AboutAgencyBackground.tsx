@@ -1,8 +1,8 @@
 import type { FC } from "react";
 
-import { motion } from "framer-motion";
-
 import "./AboutAgencyBackground.scss";
+
+import { motion } from "framer-motion";
 
 
 const AboutAgencyBackground: FC = () => {
