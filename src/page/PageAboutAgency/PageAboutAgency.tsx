@@ -2,32 +2,30 @@ import type { FC } from "react";
 
 import "./PageAboutAgency.scss";
 
+import { motion } from "framer-motion";
+import { ReactSVG } from "react-svg";
+import { memo } from 'react';
+import { v4 } from "uuid";
+
 import { AboutAgencyBackground } from "../../component/AboutAgencyBackground";
 
-import { ReactSVG } from "react-svg";
-import { motion } from "framer-motion";
+import ValueForInfo from "./infoValues.json";
+import { containerUl, itemLi } from "./variants.FM";
 
 
-const containerUl = {
-  hidden: { opacity: 1, scale: 0 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    transition: {
-      delayChildren: 1.5,
-      staggerChildren: 0.3
-    }
-  }
-};
-
-const itemLi = {
-  hidden: { y: 20, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1
-  }
-};
-
+/**
+ * Функция создает элементы для информации в центре экрана
+ */
+function gerenateLiElement(text: string): JSX.Element {
+  return (
+    <motion.li
+      variants={itemLi}
+      key={v4()}
+    >
+      {text}
+    </motion.li>
+  );
+}
 
 const PageAboutAgency: FC = () => {
   return (
@@ -59,11 +57,9 @@ const PageAboutAgency: FC = () => {
           <motion.ol
             variants={containerUl}
             initial="hidden"
-            animate="visible">
-            <motion.li variants={itemLi}>Инновации: мы всегда стремимся быть на шаг впереди, используя новейшие инструменты и подходы для достижения ваших целей.</motion.li>
-            <motion.li variants={itemLi}>Качество: для нас важно, чтобы каждый проект был выполнен на высшем уровне, поэтому мы тщательно контролируем все процессы.</motion.li>
-            <motion.li variants={itemLi}>Командная работа: взаимодействие внутри команды и с клиентами – основа нашего успеха. Мы ценим мнение каждого участника процесса.</motion.li>
-            <motion.li variants={itemLi}>Результат: наша главная цель – достижение конкретных результатов, которые помогут вашему бизнесу расти и развиваться.</motion.li>
+            animate="visible"
+          >
+            {ValueForInfo.map((currElement) => gerenateLiElement(currElement))}
           </motion.ol>
         </div>
 
@@ -82,4 +78,5 @@ const PageAboutAgency: FC = () => {
   );
 }
 
-export default PageAboutAgency;
+
+export default memo(PageAboutAgency);

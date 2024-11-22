@@ -2,53 +2,17 @@ import type { FC } from "react";
 
 import "./OurServicesPage.scss";
 
+import { motion } from "framer-motion";
 import { ReactSVG } from "react-svg";
 import { v4 } from "uuid";
-import { motion } from "framer-motion";
 import { memo } from 'react';
 import { Link } from "react-router-dom";
 
+import ValueForInfo from "./infoValues.json";
+import { containerOl, itemLi, itemLiSvg, itemLiText } from "./variants.FM";
 
 import { OurServicesBackground } from "../../component/OurServicesBackground";
 
-const containerOl = {
-  hidden: { opacity: 1, scale: 0 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    transition: {
-      delayChildren: 1.5,
-      staggerChildren: 0.8,
-    },
-  },
-};
-
-const itemLi = {
-  hidden: { opacity: 0 },
-  visible: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.6,
-    },
-  },
-};
-
-const itemLiSvg = {
-  hidden: { x: 150, opacity: 0 },
-  visible: {
-    x: 0,
-    opacity: 1,
-    transition: { duration: 0.5 },
-  },
-};
-
-const itemLiText = {
-  hidden: { clipPath: "inset(-50% 100% -100% -50%)" },
-  visible: {
-    clipPath: "inset(-50% -100% -100% -50%)",
-    transition: { duration: 1 },
-  },
-};
 
 const MotionLink = motion.create(Link);
 
@@ -73,15 +37,6 @@ function gerenateLiElement(bubleSVG: string, text: string): JSX.Element {
     </motion.li>
   );
 }
-
-const ValueForInfo = [
-  { img: "./icons/buble-li-1.svg", text: "Разработка сайтов: от простых лендингов до сложных корпоративных порталов." },
-  { img: "./icons/buble-li-2.svg", text: "SEO-продвижение: вывод вашего сайта на первые позиции поисковых систем." },
-  { img: "./icons/buble-li-3.svg", text: "SMM: создание и ведение страниц в социальных сетях, привлечение целевой аудитории." },
-  { img: "./icons/buble-li-4.svg", text: "Контекстная реклама: настройка рекламных кампаний в Google Ads и Яндекс.Директ." },
-  { img: "./icons/buble-li-5.svg", text: "Разработка уникального фирменного стиля и графического контента." },
-];
-
 
 const OurServicesPage: FC = () => {
   return (
@@ -108,14 +63,14 @@ const OurServicesPage: FC = () => {
         {ValueForInfo.map((currElement) => gerenateLiElement(currElement.img, currElement.text))}
       </motion.ol>
 
-      <MotionLink to="https://vk.com" 
-       initial={{ opacity: 0 }}
-       animate={{ opacity: 1 }}
-       transition={{ duration: 0.8, ease: "easeInOut", delay: 5.6 }}
-      className="DetailedInformation"
+      <MotionLink to="https://vk.com"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.8, ease: "easeInOut", delay: 5.6 }}
+        className="DetailedInformation"
       >
         <p>Подробная информация<br />у нас в группе в вк:</p>
-        <ReactSVG src="./icons/VK.svg"/>
+        <ReactSVG src="./icons/VK.svg" />
       </MotionLink>
 
       <OurServicesBackground />
