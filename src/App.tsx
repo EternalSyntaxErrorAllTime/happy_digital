@@ -12,7 +12,7 @@ import { useSelector } from "react-redux";
 import { SwitchTopic } from "./component/SwitchTopic";
 
 import { IndexPage } from "./page/IndexPage";
-import { PageAboutAgency } from "./page/PageAboutAgency";
+import { AboutAgencyPage } from "./page/AboutAgencyPage";
 import { OurServicesPage } from "./page/OurServicesPage";
 
 
@@ -58,7 +58,7 @@ const App: FC = () => {
 
         <Routes>
           <Route path="/" element={<IndexPage />} />
-          <Route path="/about_agency" element={<PageAboutAgency />} />
+          <Route path="/about_agency" element={<AboutAgencyPage />} />
           <Route path="/our_services" element={<OurServicesPage />} />
         </Routes>
 

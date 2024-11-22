@@ -1,6 +1,6 @@
 import type { FC } from "react";
 
-import "./PageAboutAgency.scss";
+import "./AboutAgencyPage.scss";
 
 import { motion } from "framer-motion";
 import { ReactSVG } from "react-svg";
@@ -27,9 +27,9 @@ function gerenateLiElement(text: string): JSX.Element {
   );
 }
 
-const PageAboutAgency: FC = () => {
+const AboutAgencyPage: FC = () => {
   return (
-    <div className="PageAboutAgency">
+    <div className="AboutAgencyPage">
 
       <motion.div
         initial={{ opacity: 0, clipPath: "inset(0% 100% 0% 0%)", scale: 0.8 }}
@@ -79,4 +79,4 @@ const PageAboutAgency: FC = () => {
 }
 
 
-export default memo(PageAboutAgency);
+export default memo(AboutAgencyPage);
