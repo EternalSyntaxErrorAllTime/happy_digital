@@ -1,5 +1,6 @@
 import type { FC } from "react";
 
+
 import "./AboutAgencyPage.scss";
 
 import { motion } from "framer-motion";
