@@ -11,9 +11,9 @@ export const animate = {
 export const transitionBase = {
   duration: 2,
   ease: "easeInOut",
-  delay: 2,
+  delay: 1.6,
   filter: {
-    delay: 2.2,
+    delay: 1.8,
     duration: 2,
     ease: "easeInOut",
   },
@@ -21,28 +21,28 @@ export const transitionBase = {
 
 export const transitionMedium = {
   ...transitionBase,
-  delay: 2.2,
+  delay: 1.8,
   filter: {
     ...transitionBase.filter,
-    delay: 2.4,
+    delay: 2,
   },
 };
 
 export const transitionSlow = {
   ...transitionBase,
-  delay: 2.4,
+  delay: 2,
   filter: {
     ...transitionBase.filter,
-    delay: 2.8,
+    delay: 2.2,
   },
 };
 
 export const transitionMegaSlow = {
     ...transitionBase,
-    delay: 2.8,
+    delay: 2.2,
     filter: {
       ...transitionBase.filter,
-      delay: 3.2,
+      delay: 2.4,
     },
   };
   
