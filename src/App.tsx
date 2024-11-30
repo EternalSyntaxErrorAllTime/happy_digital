@@ -14,6 +14,7 @@ import { SwitchTopic } from "./component/SwitchTopic";
 import { IndexPage } from "./page/IndexPage";
 import { AboutAgencyPage } from "./page/AboutAgencyPage";
 import { OurServicesPage } from "./page/OurServicesPage";
+import { ReviewsPage } from "./page/ReviewsPage";
 
 
 const containerUl = {
@@ -60,6 +61,7 @@ const App: FC = () => {
           <Route path="/" element={<IndexPage />} />
           <Route path="/about_agency" element={<AboutAgencyPage />} />
           <Route path="/our_services" element={<OurServicesPage />} />
+          <Route path="/reviews" element={<ReviewsPage />} />
         </Routes>
 
         <motion.nav className="WebsiteNavigation"
@@ -76,7 +78,7 @@ const App: FC = () => {
             <motion.li variants={itemLi}><NavLink to="/">Основное</NavLink></motion.li>
             <motion.li variants={itemLi}><NavLink to="/about_agency">Об агентстве</NavLink></motion.li>
             <motion.li variants={itemLi}><NavLink to="/our_services">Наши услуги</NavLink></motion.li>
-            <motion.li variants={itemLi}><NavLink to="/z">Отзывы</NavLink></motion.li>
+            <motion.li variants={itemLi}><NavLink to="/reviews">Отзывы</NavLink></motion.li>
           </motion.ul>
           <ReactSVG src="./icons/buble-3.svg" />
         </motion.nav>
