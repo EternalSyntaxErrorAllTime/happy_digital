@@ -1,0 +1,152 @@
+.ReviewsBackground {
+  width: 100%;
+  height: 100%;
+
+  z-index: 0;
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+
+  overflow: hidden;
+
+  background-color: var(--bg);
+  position: relative;
+
+  .TopLine {
+    %RoundedRectangle {
+      width: 300px;
+      border-radius: 0 0 100px 100px;
+      box-shadow: 2px 0 10px 5px rgba(0, 0, 0, 0.5);
+      position: absolute;
+    }
+
+    .RoundedRectangle-1 {
+      @extend %RoundedRectangle;
+      background-color: var(--element-1);
+      left: 10px;
+      height: 250px;
+      display: grid;
+      place-items: center;
+      align-items: start;
+
+      .RoundedRectangle-2 {
+        border-radius: 0 0 80px 80px;
+        box-shadow: 2px 0 10px 5px rgba(0, 0, 0, 0.5);
+        background-color: var(--element-3);
+        height: 85%;
+        width: 85%;
+      }
+    }
+    .RoundedRectangle-3 {
+      left: 230px;
+      height: 380px;
+      background-color: var(--element-2);
+      @extend %RoundedRectangle;
+    }
+
+    .RoundedRectangle-4 {
+      @extend %RoundedRectangle;
+      background-color: var(--element-1);
+      left: 450px;
+      height: 330px;
+      display: grid;
+      place-items: center;
+      align-items: start;
+
+      .RoundedRectangle-5 {
+        border-radius: 0 0 80px 80px;
+        box-shadow: 2px 0 10px 5px rgba(0, 0, 0, 0.5);
+        background-color: var(--element-3);
+        height: 90%;
+        width: 85%;
+      }
+    }
+
+    .RoundedRectangle-6 {
+      @extend %RoundedRectangle;
+      left: 600px;
+      height: 200px;
+      background-color: var(--element-2);
+    }
+
+    .RoundedRectangle-7 {
+      position: absolute;
+      right: 310px;
+      box-shadow: 1px 10px 20px 0 rgba(0, 0, 0, 0.5);
+      background: var(--element-1);
+      border-radius: 0 0 0 300px;
+      max-width: 500px;
+      height: 230px;
+    }
+
+    .Rectangle-8 {
+      position: absolute;
+      right: 0;
+      border-radius: 0 0 0 69px;
+      width: 350px;
+      height: 400px;
+      box-shadow: 2px 10px 10px 5px rgba(0, 0, 0, 0.5);
+      background: var(--element-3);
+
+      .Circle-1 {
+        position: absolute;
+        border-radius: 100%;
+        background-color: var(--element-2);
+        box-shadow: 3px 10px 20px 5px rgba(0, 0, 0, 0.5);
+        width: 500px;
+        height: 500px;
+        border-radius: 100%;
+        bottom: 120px;
+        right: -200px;
+      }
+    }
+  }
+
+  .BottomLine {
+    display: flex;
+    align-items: end;
+
+    .RoundedRectangle-8 {
+      border-radius: 0 300px 0 0;
+      max-width: 725px;
+      height: 254px;
+      box-shadow: 2px -5px 20px 2px rgba(0, 0, 0, 0.5);
+      background: var(--element-1);
+      display: flex;
+      align-items: end;
+
+      .RoundedRectangle-9 {
+        width: 90%;
+        height: 85%;
+        box-shadow: 2px -5px 20px 2px rgba(0, 0, 0, 0.5);
+        background: var(--element-3);
+        border-radius: 0 300px 0 0;
+      }
+    }
+
+    .Circle-2 {
+        position: absolute;
+        border-radius: 100%;
+        background-color: var(--element-1);
+        box-shadow: 3px 10px 20px 5px rgba(0, 0, 0, 0.5);
+        width: 400px;
+        height: 400px;
+        border-radius: 100%;
+        bottom: -200px;
+        right: 400px;
+    }
+
+    .Circle-3 {
+        position: absolute;
+        border-radius: 100%;
+        background-color: var(--element-2);
+        box-shadow: 3px 10px 20px 5px rgba(0, 0, 0, 0.5);
+        width: 750px;
+        height: 750px;
+        border-radius: 100%;
+        bottom: -400px;
+        right: -250px;
+    }
+  }
+}
