@@ -1,132 +1,203 @@
 .IndexBacground {
-    
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 
-    z-index: 0;
+  z-index: 0;
 
-    display: grid; 
-    grid-template-columns: 1fr; 
-    grid-template-rows: 1fr 1fr; 
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
 
-    overflow: hidden;
+  overflow: hidden;
 
-    background-color: var(--bg);
+  background-color: var(--bg);
+  position: relative;
+
+  .TopLine {
+    display: grid;
+    grid-template-columns: 2fr 1.2fr 3.5fr 1fr 2.5fr 1.1fr 3.5fr 1.3fr 3fr;
+    grid-template-rows: 100%;
+    grid-template-areas: ". spacer . spacer . spacer . spacer .";
+
+    .Rectangle-1 {
+      max-height: 50%;
+      background-color: var(--element-1);
+      box-shadow: 2px 10px 10px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    .Rectangle-2 {
+      max-height: 95%;
+      background-color: var(--element-2);
+      box-shadow: 2px 10px 10px 5px rgba(0, 0, 0, 0.5);
+      position: relative;
+
+      .MiniCircle-1 {
+        top: 180px;
+        right: -75px;
+        position: absolute;
+        width: 100px;
+        height: 50px;
+        border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+        box-shadow: 4px -5px 5px 2px rgba(0, 0, 0, 0.5);
+        background-color: var(--element-3);
+        transform: rotate(90deg);
+      }
+
+      .MiniCircle-2 {
+        top: 150px;
+        right: -26px;
+        position: absolute;
+        width: 100px;
+        height: 50px;
+        border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+        box-shadow: -2px -3px 5px 0px rgba(0, 0, 0, 0.5);
+        background-color: var(--element-3);
+        transform: rotate(-90deg);
+      }
+    }
+
+    .RoundedRectangle-3 {
+      max-height: 45%;
+      border-radius: 0 0 100px 100px;
+      box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.5);
+      background: var(--element-1);
+    }
+
+    .Rectangle-4 {
+      max-height: 65%;
+      box-shadow: 10px 3px 10px 5px rgba(0, 0, 0, 0.5);
+      background: var(--element-2);
+
+      .MiniCircle-3 {
+        position: relative;
+        top: 80px;
+        right: -180px;
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+        background-color: var(--element-1);
+        box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.5);
+      }
+    }
+
+    .RoundedRectangle-5 {
+      max-height: 75%;
+      border-radius: 0 0 0 10px;
+      box-shadow: 2px 10px 10px 5px rgba(0, 0, 0, 0.5);
+      background: var(--element-3);
+
+      .MiniCircle-4 {
+        position: relative;
+        top: -20px;
+        right: -280px;
+        width: 100px;
+        height: 100px;
+        border-radius: 100%;
+        background-color: var(--element-1);
+        box-shadow: -3px 0 5px 2px rgba(0, 0, 0, 0.5);
+      }
+    }
+  }
+
+  .BottomLine {
+    display: grid;
+    grid-template-columns: 0.2fr 0.1fr 1fr;
+    grid-template-rows: 100%;
+    grid-template-areas: ". spacer .";
+
     position: relative;
 
-    .TopLine {
-        display: grid; 
-        grid-template-columns: 2fr 1.2fr 3.5fr 1fr 2.5fr 1.1fr 3.5fr 1.3fr 3fr;
-        grid-template-rows: 100%; 
-        grid-template-areas: 
-        ". spacer . spacer . spacer . spacer ."; 
+    .Сircle-1 {
+      position: relative;
+      left: -130px;
+      bottom: -130px;
 
-        .Rectangle-1 {
-            max-height: 50%;
-            background-color: var(--element-1);
-            box-shadow: 2px 10px 10px 5px rgba(0, 0, 0, 0.5);
-        }
-        
-        .Rectangle-2 {
-            max-height: 95%;
-            background-color: var(--element-2);
-            box-shadow: 2px 10px 10px 5px rgba(0, 0, 0, 0.5);
-        }
+      display: grid;
+      place-items: center;
 
-        .RoundedRectangle-3 {
-            max-height: 45%;
-            border-radius: 0 0 100px 100px;
-            box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.5);
-            background: var(--element-1);
-        }
+      width: 424px;
+      height: 424px;
 
-        .Rectangle-4 {
-            max-height: 65%;
-            box-shadow: 10px 3px 10px 5px rgba(0, 0, 0, 0.5);
-            background: var(--element-2);
-        }
+      border-radius: 100%;
+      box-shadow: 0 4px 10px 5px rgba(0, 0, 0, 0.5);
+      background-color: var(--element-1);
 
-        .RoundedRectangle-5 {
-            max-height: 75%;
-            border-radius: 0 0 0 10px;
-            box-shadow: 2px 10px 10px 5px rgba(0, 0, 0, 0.5);
-            background: var(--element-3);
-        }
+      .Сircle-2 {
+        width: 380px;
+        height: 380px;
+
+        border-radius: 100%;
+        box-shadow: inset 0 0 5px 1px rgba(0, 0, 0, 0.5);
+        background-color: var(--element-3);
+      }
     }
 
-    .BottomLine {
-        display: grid; 
-        grid-template-columns: 0.2fr 0.1fr 1fr;
-        grid-template-rows: 100%; 
-        grid-template-areas: 
-        ". spacer ."; 
+    .RightElemtn {
+      position: relative;
 
-        position: relative;
+      .Сircle-3 {
+        position: absolute;
+        bottom: -375px;
 
-        .Сircle-1 {
-            position: relative;
-            left: -130px;
-            bottom: -130px;
+        width: 750px;
+        height: 750px;
 
-            display: grid;
-            place-items: center;
+        border-radius: 100%;
+        box-shadow: 0 -2px 20px 2px rgba(0, 0, 0, 0.5);
+        background-color: var(--element-3);
+      }
 
-            width: 424px;
-            height: 424px;
-            
-            border-radius: 100%;
-            box-shadow: 0 4px 10px 5px rgba(0, 0, 0, 0.5);
-            background-color: var(--element-1);
+      .Rectangle-1 {
+        position: absolute;
+        bottom: 0;
+        right: 0;
 
-            .Сircle-2 {
-                width: 380px;
-                height: 380px;    
+        border-radius: 300px 0 0 0;
+        max-width: 650px;
+        height: 180px;
+        box-shadow: -10px -2px 20px 0 rgba(0, 0, 0, 0.5);
+        background: var(--element-2);
+      }
 
-                border-radius: 100%;
-                box-shadow: inset 0 0 5px 1px rgba(0, 0, 0, 0.5);
-                background-color: var(--element-3);
-            }
-        }
+      .Rectangle-2 {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 280px;
+        max-height: 80%;
 
-        .RightElemtn {
-            position: relative;
-
-            .Сircle-3 {
-                position: absolute;
-                bottom: -375px;
-
-                width: 750px;
-                height: 750px;    
-    
-                border-radius: 100%;
-                box-shadow: 0 -2px 20px 2px rgba(0, 0, 0, 0.5);
-                background-color: var(--element-3);
-            }
-    
-            .Rectangle-1 {
-                position: absolute;
-                bottom: 0;
-                right: 0;                
-                
-                border-radius: 300px 0 0 0;
-                max-width: 650px;
-                height: 180px;
-                box-shadow: -10px -2px 20px 0 rgba(0, 0, 0, 0.5);
-                background: var(--element-2);
-            }
-
-            .Rectangle-2 {
-                position: absolute;
-                bottom: 0;
-                right: 0;   
-                width: 280px;
-                max-height: 80%;
-
-                box-shadow: -5px -5px 10px 2px rgba(0, 0, 0, 0.5);
-                background: var(--element-3);
-            }
-        }
-
+        box-shadow: -5px -5px 10px 2px rgba(0, 0, 0, 0.5);
+        background: var(--element-3);
+      }
     }
-    
+  }
+
+  .containerForCurvedLine {
+    position: absolute;
+    left: 100px;
+    top: -50px;
+    transform: rotate(230deg);
+  }
+
+  .containerForCross {
+    position: absolute;
+    left: 80px;
+    top: 20px;
+
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+
+    svg defs linearGradient {
+      stop:nth-child(1) {
+        stop-color: var(--element-1);
+      }
+      stop:nth-child(2) {
+        stop-color: var(--element-1);
+      }
+      stop:nth-child(3) {
+        stop-color: var(--element-3);
+      }
+    }
+  }
 }
